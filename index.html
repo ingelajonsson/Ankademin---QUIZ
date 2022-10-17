@@ -11,15 +11,17 @@
 <body>
 
     <h1>Quiz!</h1>
+    <button>Dark mode</button>
+    <button>Light mode</button>
     <br><div>
         <p>Question 1 ...</p>
-        <input type="radio" name="q1" value="q1a" id="q1a">
+        <input type="radio" name="q1" value="correct" id="q1a">
         <label for="q1a">Answer a</label>
         <input type="radio" name="q1" value="q1b" id="q1b">
         <label for="q1b">Answer b</label>
     </div><br><div>
         <p>Question 2 ...</p>
-        <input type="radio" name="q2" value="q2a" id="q2a">
+        <input type="radio" name="q2" value="correct" id="q2a">
         <label for="q2a">Answer a</label>
         <input type="radio" name="q2" value="q2b" id="q2b">
         <label for="q2b">Answer b</label>
@@ -27,41 +29,41 @@
         <p>Question 3 ...</p>
         <input type="radio" name="q3" value="q3a" id="q3a">
         <label for="q3a">Answer a</label>
-        <input type="radio" name="q3" value="q3b" id="q3b">
+        <input type="radio" name="q3" value="correct" id="q3b">
         <label for="q3b">Answer b</label>
     </div><br><div>
         <p>Question 4 ...</p>
-        <input type="radio" name="q4" value="q4a" id="q4a">
-        <label for="q1a">Answer a</label>
+        <input type="radio" name="q4" value="correct" id="q4a">
+        <label for="q4a">Answer a</label>
         <input type="radio" name="q4" value="q4b" id="q4b">
         <label for="q4b">Answer b</label>
     </div><br><div>
         <p>Question 5 ...</p>
         <input type="radio" name="q5" value="q5a" id="q5a">
         <label for="q5a">Answer a</label>
-        <input type="radio" name="q5" value="q5b" id="q5b">
+        <input type="radio" name="q5" value="correct" id="q5b">
         <label for="q5b">Answer b</label>
     </div><br><div>
         <p>Question 6 ...</p>
         <input type="radio" name="q6" value="q6a" id="q6a">
         <label for="q6a">Answer a</label>
-        <input type="radio" name="q6" value="q6b" id="q6b">
+        <input type="radio" name="q6" value="correct" id="q6b">
         <label for="q6b">Answer b</label>
     </div><br><div>
         <p>Question 7 ...</p>
         <input type="radio" name="q7" value="q7a" id="q7a">
         <label for="q7a">Answer a</label>
-        <input type="radio" name="q7" value="q7b" id="q7b">
+        <input type="radio" name="q7" value="correct" id="q7b">
         <label for="q7b">Answer b</label>
     </div><br><div>
         <p>Question 8 ...</p>
-        <input type="radio" name="q8" value="q8a" id="q8a">
+        <input type="radio" name="q8" value="correct" id="q8a">
         <label for="q8a">Answer a</label>
         <input type="radio" name="q8" value="q8b" id="q8b">
         <label for="q8b">Answer b</label>
     </div><br><div>
         <p>Question 9 ...</p>
-        <input type="radio" name="q9" value="q9a" id="q9a">
+        <input type="radio" name="q9" value="correct" id="q9a">
         <label for="q9a">Answer a</label>
         <input type="radio" name="q9" value="q9b" id="q9b">
         <label for="q9b">Answer b</label>
@@ -69,12 +71,16 @@
         <p>Question 10 ...</p>
         <input type="radio" name="q10" value="q10a" id="q10a">
         <label for="q10a">Answer a</label>
-        <input type="radio" name="q10" value="q10b" id="q10b">
+        <input type="radio" name="q10" value="correct" id="q10b">
         <label for="q10b">Answer b</label>
-    </div><br>
-    <button id="submitBt">Submit answers</button>
+    </div>
     <br><br>
-    <p id="result">You result:</p>
+    <input type="checkbox" id="robotCheck">
+    <label for="robotCheck">Please confirm that you're human!</label>
+    <br><br>
+    <button id="submitBtn">Submit answers</button>
+    <br><br>
+    <p id="result">You result: <br></p>
 
 </body>
 </html>
