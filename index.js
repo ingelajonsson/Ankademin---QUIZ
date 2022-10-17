@@ -1,85 +1,67 @@
 let submitBtn = document.querySelector("#submitBtn");
 let result = document.querySelector("#result");
+let themeBtn = document.querySelector("#themeBtn");
 
-//let robotCheck = document.querySelector("#robotCheck");
+let robotCheck = document.querySelector("#robotCheck");
 
-/*function isRobot(){
+function isRobot(){
     if (robotCheck.checked){
         return true;
     }else{
         alert("You're a robot, please come back when you're a human!");
     }
-}*/
+}
 
 let arrAnswers = []; 
 
-
 submitBtn.addEventListener("click", () => {
-    //if(isRobot()) {
-    let questions = document.querySelectorAll("[type='radio']:checked");
+    if(isRobot()) {
+        result.innerText = "";
+        let questions = document.querySelectorAll("[type='radio']:checked");
+        
+        questions.forEach(item  => {
+            if(item.value === "correct"){
+                arrAnswers.push(item.value);
+            }
+        })
+        
+        let name = document.querySelector("#name");
 
-    questions.forEach(item  => {
-        if(item.value === "correct"){
-        arrAnswers.push(item.value);
-    }
-    })
-
-
-    console.log(arrAnswers.length);
-
-    if(arrAnswers.length < 5){
+        if(arrAnswers.length < 5){
         let score = document.createElement("h3");
-        score.innerText = "You have failed.."
+        score.innerText = `Better luck next time ${name.value}, you have failed. You're score is ${arrAnswers.length}/10`
         score.style.color = "red";
 
         result.append(score);
-    }
-    else if(arrAnswers.length >= 5 && arrAnswers.length < 8){
+        }
+        else if(arrAnswers.length >= 5 && arrAnswers.length < 8){
         let score = document.createElement("h3");
-        score.innerText = "You have passed the test"
+        score.innerText = `Well done ${name.value}, you have passed the test. You're score is ${arrAnswers.length}/10`
         score.style.color = "orange";
 
         result.append(score);
-    } 
-    else if(arrAnswers.length >= 8){
+        } 
+        else if(arrAnswers.length >= 8){
         let score = document.createElement("h3");
-        score.innerText = "You have passed the test with flying colors!"
+        score.innerText = `Amazing ${name.value}, you passed the test with flying colors! You're score is ${arrAnswers.length}/10`
         score.style.color = "green";
 
         result.append(score);
-    } 
+        } 
+    }
 
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-function lightMode() {
-    document.body.style background = "white";
-
+function themeToggle () {
+    let theme = document.getElementsByTagName("link")[0];
+    if(theme.getAttribute("href") == "lightmode.css"){
+        theme.setAttribute("href", "darkmode.css");
+    }
+    else{
+        theme.setAttribute("href", "lightmode.css");
+    }
 }
 
-function darkMode() {
-    document.body.style.background = "black";
-    let heading2 = document.querySelector("h2");
-    let heading1 = document.querySelector("h1");
-  
-    heading2.style.color = "white";
-    heading2.style.background = "#fa6030";
-    heading1.style.color = "white";
-  }
+themeBtn.addEventListener("click", (themeToggle));
 
-
-  */

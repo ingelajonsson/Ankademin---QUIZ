@@ -1,0 +1,10 @@
+body {
+    background-color: #E1FEDE;
+    font-family: sans-serif;
+}
+
+div {
+    border: solid 2px black;
+    border-radius: 8px;
+    padding: 20px;
+}
