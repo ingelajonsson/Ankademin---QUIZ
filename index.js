@@ -2,6 +2,7 @@ let submitBtn = document.querySelector("#submitBtn");
 let result = document.querySelector("#result");
 let themeBtn = document.querySelector("#themeBtn");
 let robotCheck = document.querySelector("#robotCheck");
+let pTag = document.querySelectorAll(".pTag");
 
 function isRobot(){
     if (robotCheck.checked){
@@ -21,9 +22,13 @@ submitBtn.addEventListener("click", () => {
         questions.forEach(item  => {
             if(item.value === "correct"){
                 arrAnswers.push(item.value);
+                item.parentElement.style.color = "green";
+            }
+            else{
+                item.parentElement.style.color = "red";
             }
         })
-        
+
         let name = document.querySelector("#name");
 
         if(arrAnswers.length < 5){
@@ -47,6 +52,17 @@ submitBtn.addEventListener("click", () => {
 
         result.append(score);
         } 
+
+
+        // questions.forEach(item  => {
+        //     if(item.value === "correct"){
+        //         questions.parentElement.style.color = "green";
+        //     }
+        //     else{
+        //         questions.parentElement.style.color = "red";
+        //     }
+        // })
+
     }
 })
 
@@ -59,3 +75,7 @@ themeBtn.addEventListener("click", () => {
         theme.setAttribute("href", "lightmode.css");
     }
 });
+
+
+
+
