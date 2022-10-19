@@ -1,6 +1,12 @@
 body {
-    background-color: #E1FEDE;
+    background-color: #e9f2f7;
     font-family: sans-serif;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid 30px rgb(89, 143, 229);
+    border-radius: 8px;
 }
 
 div {
@@ -8,3 +14,4 @@ div {
     border-radius: 8px;
     padding: 20px;
 }
+

@@ -1,7 +1,6 @@
 let submitBtn = document.querySelector("#submitBtn");
 let result = document.querySelector("#result");
 let themeBtn = document.querySelector("#themeBtn");
-
 let robotCheck = document.querySelector("#robotCheck");
 
 function isRobot(){
@@ -12,12 +11,12 @@ function isRobot(){
     }
 }
 
-let arrAnswers = []; 
-
 submitBtn.addEventListener("click", () => {
     if(isRobot()) {
         result.innerText = "";
+        
         let questions = document.querySelectorAll("[type='radio']:checked");
+        let arrAnswers = []; 
         
         questions.forEach(item  => {
             if(item.value === "correct"){
@@ -49,11 +48,9 @@ submitBtn.addEventListener("click", () => {
         result.append(score);
         } 
     }
-
 })
 
-
-function themeToggle () {
+themeBtn.addEventListener("click", () => {
     let theme = document.getElementsByTagName("link")[0];
     if(theme.getAttribute("href") == "lightmode.css"){
         theme.setAttribute("href", "darkmode.css");
@@ -61,7 +58,4 @@ function themeToggle () {
     else{
         theme.setAttribute("href", "lightmode.css");
     }
-}
-
-themeBtn.addEventListener("click", (themeToggle));
-
+});

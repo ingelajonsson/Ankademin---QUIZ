@@ -1,7 +1,13 @@
-body{
-    background-color: black;
+body {
+    background-color: #1e1e1e;
     font-family: sans-serif;
-    color: white;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid 30px rgb(70, 71, 71);
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
 }
 div {
     border: solid 2px white;
