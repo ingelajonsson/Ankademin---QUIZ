@@ -36,8 +36,6 @@ submitBtn.addEventListener("click", () => {
         })
 
         let checkArr1 = []; 
-        let checkArr2 = []; 
-
         let q3 = document.querySelectorAll("[name='q3']:checked");
         q3.forEach(item => {
             if(item.value !== "wrong"){
@@ -48,6 +46,7 @@ submitBtn.addEventListener("click", () => {
             }
         })
 
+        let checkArr2 = []; 
         let q7 = document.querySelectorAll("[name='q7']:checked");
         q7.forEach(item => {
             if(item.value !== "wrong"){
