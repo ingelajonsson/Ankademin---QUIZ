@@ -10,7 +10,7 @@ body {
 }
 
 div {
-    border: solid 2px black;
+    border: solid 2px rgb(89, 143, 229);
     border-radius: 8px;
     padding: 20px;
 }
