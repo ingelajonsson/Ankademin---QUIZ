@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="lightmode.css">
 </head>
 <body>
-    <label class="switch">
-        <input type="checkbox" id="themeBtn">
-        <label for="themeBtn">Dark mode</label>
-        <span class="slider-round"></span>
-      </label>
+    <input type="checkbox" id="themeBtn">
+    <label for="themeBtn">Dark mode</label>
 
     <h1>AMAZING MOVIE QUIZ!</h1>
     <label for="name">Please insert your name: </label>
@@ -44,8 +41,8 @@
         <label for="q3b">Michael Keaton</label>
         <input type="checkbox" class="checkQ" name="q3" value="correct" id="q3c">
         <label for="q3c">George Clooney</label>
-        <input type="checkbox" class="checkQ" name="q3" value="correct" id="q3d">
-        <label for="q3d">Robert Pattingsson</label>
+        <input type="checkbox" class="checkQ" name="q3" value="wrong" id="q3d">
+        <label for="q3d">Daniel Craig</label>
     </div><br><div>
         <p>4 - Nemo's fathers name is Marlin</p>
         <input type="radio" name="q4" value="correct" id="q4a">
@@ -100,14 +97,12 @@
         <label for="q10c">2017</label>
         <input type="radio" name="q10" value="wrong" id="q10c">
         <label for="q10d">2014</label>
-    </div>
-    <br><br>
+    </div><br><br>
     <input type="checkbox" id="robotCheck">
     <label for="robotCheck">Please confirm that you're human!</label>
     <br><br>
     <button id="submitBtn">Submit answers</button>
     <br><br>
-    <p id="result">Your result: </p>
-
+    <h3 id="result">Your result: </h3>
 </body>
 </html>
